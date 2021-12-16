@@ -1,15 +1,33 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3.0 + Vite" />
+  <Upvote v-bind:upvoted="true" />
+  <Upvote v-bind:upvoted="false" />
+  <!-- <Upvote v-bind:upvoted="store.state.upvoted" /> -->
+  <button onclick="store.toggle()">click me</button>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { createStore } from 'vuex';
+import Upvote from './components/Upvote.vue';
+
+const store = createStore({
+  state () {
+    return {
+      upvoted: false
+    }
+  },
+  mutations: {
+    toggle (state) {
+      state.upvoted = !state.upvoted;
+    }
+  }
+});
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Upvote
   }
 }
 </script>
