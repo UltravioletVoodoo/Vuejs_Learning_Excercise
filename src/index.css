@@ -6,3 +6,11 @@
   color: #2c3e50;
   margin-top: 60px;
 }
+.upvoteSetContainer {
+  position: relative;
+  width: 500px;
+  border: 1px solid black;
+}
+.upvoteContainer {
+  border: 1px solid black;
+}

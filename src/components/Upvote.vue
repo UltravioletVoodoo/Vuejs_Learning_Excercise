@@ -1,6 +1,8 @@
 <template>
-  <p>This is my upvote component</p>
-  <p>The current state is ({{ upvoted }})</p>
+  <div class="upvoteContainer">
+    <p>This is my upvote component</p>
+    <p>The current state is ({{ upvoted }})</p>
+  </div>
 </template>
 
 <script>

@@ -1,19 +1,19 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <Upvote />
-  <Upvote />
-  <Upvote />
+  <UpvoteSet color="blue" />
+  <UpvoteSet color="green" />
+  <UpvoteSet color="red" />
   <button v-on:click="this.$store.commit('toggle')">click me</button>
 </template>
 
 <script>
-import Upvote from './components/Upvote.vue';
+import UpvoteSet from './components/UpvoteSet.vue';
 
 
 export default {
   name: 'App',
   components: {
-    Upvote
+    UpvoteSet
   }
 }
 </script>
