@@ -6,8 +6,10 @@
 <script>
 export default {
   name: 'Upvote',
-  props: {
-    upvoted: Boolean
+  computed: {
+    upvoted() {
+      return this.$store.state.upvoted;
+    }
   }
 }
 </script>
