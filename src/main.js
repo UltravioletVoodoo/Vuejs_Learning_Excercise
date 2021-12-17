@@ -5,11 +5,15 @@ import './index.css'
 
 const store = createStore({
     state: {
-      upvoted: true
+      upvoted: true,
+      num: 2
     },
     mutations: {
       toggle (state) {
         state.upvoted = !state.upvoted;
+      },
+      increment (state) {
+          state.num++;
       }
     }
   });
