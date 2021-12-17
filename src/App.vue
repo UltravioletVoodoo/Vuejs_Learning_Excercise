@@ -1,7 +1,7 @@
 <template>
-  <UpvoteSet color="blue" />
-  <UpvoteSet color="green" />
-  <UpvoteSet color="red" />
+  <UpvoteSet section="firstSection" />
+  <UpvoteSet section="secondSection" />
+  <UpvoteSet section="thirdSection" />
 </template>
 
 <script>

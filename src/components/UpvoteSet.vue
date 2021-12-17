@@ -1,7 +1,7 @@
 <template>
     <div class="upvoteSetContainer">
-        <p>This is an upvote set, it is for color {{ color }}</p>
-        <Upvote v-for:="index in this.$store.state.num" :key="index"/>
+        <p>{{ section }}</p>
+        <Upvote v-for:="index in this.$store.state[section].num" :key="index" :section="section"/>
     </div>
     <div v-on:click="handleAddClick()" class="svgIconBase upvoteArrowContainer addIcon">
         <img class="svgIconBase svgIcon" src="../assets/add.svg" />
@@ -14,14 +14,14 @@ import Upvote from "./Upvote.vue";
 export default {
   name: 'UpvoteSet',
   props: {
-      color: String
+      section: String
   },
   components: {
       Upvote
   },
   methods: {
       handleAddClick() {
-          this.$store.commit(`increment`);
+          this.$store.commit(`increment_${this.section}`);
       }
   }
 }

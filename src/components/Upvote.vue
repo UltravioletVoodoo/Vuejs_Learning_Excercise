@@ -1,7 +1,7 @@
 <template>
   <div class="upvoteContainer">
-    <div v-on:click="handleUpvoteClick()" :class="this.$store.state.upvoted ? 'svgIconBase upvoteArrowContainerSelected' : 'svgIconBase upvoteArrowContainer'">
-      <img :class="this.$store.state.upvoted ? 'svgIconBase selectedUpvoteArrow' : 'svgIconBase svgIcon'" src="../assets/arrow.svg" />
+    <div v-on:click="handleUpvoteClick()" :class="this.$store.state[section].upvoted ? 'svgIconBase upvoteArrowContainerSelected' : 'svgIconBase upvoteArrowContainer'">
+      <img :class="this.$store.state[section].upvoted ? 'svgIconBase selectedUpvoteArrow' : 'svgIconBase svgIcon'" src="../assets/arrow.svg" />
     </div>
   </div>
 </template>
@@ -10,6 +10,9 @@
 
 export default {
   name: 'Upvote',
+  props: {
+    section: String
+  },
   computed: {
     upvoted() {
       return this.$store.state.upvoted;
@@ -17,7 +20,7 @@ export default {
   },
   methods: {
     handleUpvoteClick() {
-      this.$store.commit('toggle');
+      this.$store.commit(`toggle_${this.section}`);
     }
   }
 }

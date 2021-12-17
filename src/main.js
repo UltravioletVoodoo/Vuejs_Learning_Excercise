@@ -5,15 +5,37 @@ import './index.css'
 
 const store = createStore({
     state: {
-      upvoted: true,
-      num: 2
+        firstSection: {
+            upvoted: true,
+            num: 3
+        },
+        secondSection: {
+            upvoted: true,
+            num: 3
+        },
+        thirdSection: {
+            upvoted: true,
+            num: 3
+        }
     },
     mutations: {
-      toggle (state) {
-        state.upvoted = !state.upvoted;
+      toggle_firstSection (state) {
+        state.firstSection.upvoted = !state.firstSection.upvoted;
       },
-      increment (state) {
-          state.num++;
+      increment_firstSection (state) {
+          state.firstSection.num++;
+      },
+      toggle_secondSection (state) {
+        state.secondSection.upvoted = !state.secondSection.upvoted;
+      },
+      increment_secondSection (state) {
+          state.secondSection.num++;
+      },
+      toggle_thirdSection (state) {
+        state.thirdSection.upvoted = !state.thirdSection.upvoted;
+      },
+      increment_thirdSection (state) {
+          state.thirdSection.num++;
       }
     }
   });
