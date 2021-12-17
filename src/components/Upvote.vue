@@ -1,6 +1,6 @@
 <template>
   <div class="upvoteContainer">
-    <div v-on:click="handleUpvoteClick()" :class="this.$store.state[section].upvoted ? 'svgIconBase upvoteArrowContainerSelected' : 'svgIconBase upvoteArrowContainer'">
+    <div v-on:click="handleUpvoteClick()" :class="this.$store.state[section].upvoted ? 'svgIconBase upvoteArrowContainer upvoteArrowContainerSelected' : 'svgIconBase upvoteArrowContainer upvoteArrowContainerNotSelected'">
       <img :class="this.$store.state[section].upvoted ? 'svgIconBase selectedUpvoteArrow' : 'svgIconBase svgIcon'" src="../assets/arrow.svg" />
     </div>
   </div>

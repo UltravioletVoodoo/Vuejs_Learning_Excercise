@@ -1,10 +1,13 @@
 <template>
-    <div class="upvoteSetContainer">
-        <p>{{ section }}</p>
-        <Upvote v-for:="index in this.$store.state[section].num" :key="index" :section="section"/>
-    </div>
-    <div v-on:click="handleAddClick()" class="svgIconBase upvoteArrowContainer addIcon">
-        <img class="svgIconBase svgIcon" src="../assets/add.svg" />
+    <div class="upvoteSetSectionContainer">
+        <div class="upvoteSetContainer">
+            <Upvote v-for:="index in this.$store.state[section].num" :key="index" :section="section"/>
+        </div>
+        <div class="addIconContainer">
+            <div v-on:click="handleAddClick()" class="svgIconBase upvoteArrowContainerNotSelected addIcon">
+                <img class="svgIconBase svgIcon" src="../assets/add.svg" />
+            </div>
+        </div>
     </div>
 </template>
 

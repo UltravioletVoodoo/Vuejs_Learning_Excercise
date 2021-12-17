@@ -6,15 +6,15 @@ import './index.css'
 const store = createStore({
     state: {
         firstSection: {
-            upvoted: true,
+            upvoted: false,
             num: 3
         },
         secondSection: {
-            upvoted: true,
+            upvoted: false,
             num: 3
         },
         thirdSection: {
-            upvoted: true,
+            upvoted: false,
             num: 3
         }
     },

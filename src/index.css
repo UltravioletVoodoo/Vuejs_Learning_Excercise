@@ -6,11 +6,25 @@
   color: #2c3e50;
   margin-top: 60px;
 }
+.upvoteSetSectionContainer {
+  position: relative;
+  width: 750px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 20px;
+}
+.addIconContainer {
+  height: 100%;
+  display: inline-block;
+}
 .upvoteSetContainer {
   position: relative;
   width: 500px;
   border: 1px solid black;
+  border-radius: 10px;
   display: inline-block;
+  margin-right: 10px;
+  text-align: left;
 }
 .upvoteContainer {
   width: 50px;
@@ -27,7 +41,10 @@
   display: inline-block;
 }
 .upvoteArrowContainer {
-  background-color: #F4F6F8;
+  position: relative;
+}
+.upvoteArrowContainerNotSelected {
+  background-color: #f4f6f8;
 }
 .upvoteArrowContainerSelected {
   background-color: #E5E8FD;
@@ -40,4 +57,7 @@
 }
 .addIcon {
   display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
